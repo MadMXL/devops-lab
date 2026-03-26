@@ -11,13 +11,32 @@ def calculate_tax(income):
         return 27500 + (income - 500000) * 0.15
     else:
         return 65000 + (income - 750000) * 0.20
-
 def tax_summary(income):
     tax = calculate_tax(income)
     print(f"Net income after tax: {income - tax:>10,.2f} THB")
 
+<<<<<<< HEAD
+def tax_summary(income):
+    tax = calculate_tax(income)
+    print(f"Net income after tax: {income - tax:>10,.2f} THB")
+
+=======
+def calculate_deduction(expense_type, amount):
+    """Calculate allowable tax deductions."""
+    deductions = {
+        "insurance": min(amount, 100000),
+        "education": min(amount, 50000),
+        "donation": min(amount, 100000),
+    }
+    return deductions.get(expense_type, 0)
+>>>>>>> feature/tax-deduction
 if __name__ == "__main__":
     test_incomes = [100000, 250000, 400000, 600000, 1000000]
     for income in test_incomes:
         tax = calculate_tax(income)
+<<<<<<< HEAD
        print(f"[TAX] Income: {income:>10,} THB | Tax: {tax:>10,.2f} THB")
+=======
+        print(f"Income: {income:>10,} THB | Tax: {tax:>10,.2f} THB")
+
+>>>>>>> feature/tax-deduction
