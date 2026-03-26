@@ -10,7 +10,7 @@ def calculate_tax(income):
     elif income <= 750000:
         return 27500 + (income - 500000) * 0.15
     else:
-        return 65000 + (income - 750000) * 0.20
+         65000 + (income - 750000) * 0.20
 
 def tax_summary(income):
     tax = calculate_tax(income)
