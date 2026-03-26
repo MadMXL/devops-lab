@@ -12,12 +12,12 @@ def calculate_tax(income):
     else:
         return 65000 + (income - 750000) * 0.20
 
+def tax_summary(income):
+    tax = calculate_tax(income)
+    print(f"Net income after tax: {income - tax:>10,.2f} THB")
+
 if __name__ == "__main__":
     test_incomes = [100000, 250000, 400000, 600000, 1000000]
     for income in test_incomes:
         tax = calculate_tax(income)
-        print(f"Income: {income:>10,} THB | Tax: {tax:>10,.2f} THB")
-
-def tax_summary(income):
-    tax = calculate_tax(income)
-    print(f"Net income after tax: {income - tax:>10,.2f} THB")
+       print(f"[TAX] Income: {income:>10,} THB | Tax: {tax:>10,.2f} THB")
