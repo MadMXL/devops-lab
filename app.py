@@ -1,4 +1,5 @@
 # app.py - Simple Tax Calculator
+# Version 2: added inline comments
 def calculate_tax(income):
     if income <= 150000:
         return 0
